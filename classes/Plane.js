@@ -1,7 +1,3 @@
-class Plane {
-
-
-}
-
+class Plane {}
 
 module.exports = Plane;
