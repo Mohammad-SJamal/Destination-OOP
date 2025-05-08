@@ -1,6 +1,7 @@
 const Person = require('../../classes/Person')
 const Bag = require('../../classes/Bag')
 
+
 let testPerson = new Person("John", "Hyderabad");
 
 describe("Testing person init", () => {
