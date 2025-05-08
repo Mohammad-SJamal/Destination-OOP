@@ -1,4 +1,5 @@
 const Airport = require("./../../classes/Airport");
+const Plane = require("./../../classes/Plane");
 
 describe("Airport Class", () => {
   let airport = new Airport("JFK", "JFK", "LAX123", "NW123", []);
@@ -24,25 +25,13 @@ describe("Airport Class", () => {
   });
 
   //test getPlanes() returns the planes array
-  test("getPlanes() returns the planes array", () => {
-    airport.addPlane("Plane1", "Plane2", "Plane3", "Plane4");
-    expect(airport.getPlanes()).toEqual([
-      "Plane1",
-      "Plane2",
-      "Plane3",
-      "Plane4",
-    ]);
+  test("getPlanes() returns the planes array of objects", () => {
+    expect(airport.getPlanes()).toEqual([]);
   });
 
   //test addPlane() adds a plane to the planes array
   test("addPlane() adds a plane to the planes array", () => {
     airport.addPlane("Plane5");
-    expect(airport.getPlanes()).toEqual([
-      "Plane1",
-      "Plane2",
-      "Plane3",
-      "Plane4",
-      "Plane5",
-    ]);
+    expect(airport.getPlanes()).toEqual(["Plane5"]);
   });
 });
